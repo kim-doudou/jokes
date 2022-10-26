@@ -5,27 +5,28 @@ import './App.css';
 
 
 function App() {
-  const [joke, setJoke] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [joke,
+     setJoke] = useState(null);
+  const [loading,
+     setLoading] = useState(false);
   const [showResponse, setShowResponse] = useState();
 
   
   const fetchJoke = (e) => {
-    if(loading) return;
 
-    setLoading(true);
+    /* 1. Appeler l'api https://official-joke-api.appspot.com/random_joke
 
-    fetch("https://official-joke-api.appspot.com/random_joke")
-      .then(response => response.json())
-      .then(data => {
-        setJoke(data);
-        setLoading(false);
-      })
-    
-    if(showResponse === true) {
-      setShowResponse(false);
-    }  
+      Celle-ci répondra avec un objet de cette forme :
+        {
+          "id":number,
+          "type":string,
+          "setup":string,
+          "punchline":string,
+        }
 
+
+      2. Quand vous avez la réponse, mettez le contenu dans la variable "joke" et tout devrait fonctionner
+  */
   }
 
   return (
